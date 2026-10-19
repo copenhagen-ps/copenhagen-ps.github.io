@@ -523,6 +523,52 @@
       margin-top: 0;
     }
 
+    .reasons {
+      margin-top: clamp(2rem, 5vh, 3.5rem);
+      scroll-margin-top: 2rem;
+    }
+    .reasons h2 {
+      font-size: clamp(1.4rem, 3vw, 2rem);
+      font-weight: 600;
+      letter-spacing: -0.02em;
+    }
+    .reasons-body {
+      margin-top: 1.4rem;
+      max-width: 68ch;
+    }
+    .reasons-body p {
+      color: #c4b7b8;
+      font-size: clamp(0.95rem, 1.8vw, 1.06rem);
+      line-height: 1.75;
+    }
+    .reasons-body ul {
+      list-style: none;
+      margin: 1.1rem 0 0;
+      display: grid;
+      gap: 0.85rem;
+    }
+    .reasons-body li {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.65rem;
+      color: #c4b7b8;
+      font-size: clamp(0.95rem, 1.8vw, 1.06rem);
+      line-height: 1.75;
+    }
+    .reasons-body li::before {
+      content: "";
+      flex: none;
+      width: 6px;
+      height: 6px;
+      margin-top: 0.65em;
+      background: var(--accent);
+      transform: rotate(45deg);
+    }
+    .reasons-body li strong {
+      color: var(--fg);
+      font-weight: 600;
+    }
+
     .program {
       margin-top: clamp(3.5rem, 9vh, 6rem);
     }
@@ -648,6 +694,25 @@
     }
     .schedule .break .detail {
       color: var(--muted);
+    }
+
+    .organization {
+      margin-top: clamp(3.5rem, 9vh, 6rem);
+      scroll-margin-top: 2rem;
+    }
+    .organization h2 {
+      font-size: clamp(1.4rem, 3vw, 2rem);
+      font-weight: 600;
+      letter-spacing: -0.02em;
+    }
+    .organization-body {
+      margin-top: 1.4rem;
+      max-width: 68ch;
+    }
+    .organization-body p {
+      color: #c4b7b8;
+      font-size: clamp(0.95rem, 1.8vw, 1.06rem);
+      line-height: 1.75;
     }
 
     .register {
@@ -792,7 +857,7 @@
         <a class="nav-link" href="#call-for-contributions">Call for Talks</a>
         <a class="nav-link" href="#register">Important dates</a>
         <a class="nav-btn primary" href="https://docs.google.com/forms/d/e/1FAIpQLScVnV9nI2N9BvgN-wT77mKXkzoMmQl5RL_J4ogImElWWaQ4mQ/viewform" target="_blank" rel="noopener">Submit proposal</a>
-        <a class="nav-btn" href="#register">Register</a>
+        <a class="nav-btn" href="#organization">Register</a>
       </nav>
     </header>
 
@@ -875,6 +940,21 @@
             </div>
           </section>
 
+          <section class="reasons" id="reasons">
+            <h2>Reasons to join</h2>
+            <div class="reasons-body">
+              <p>
+                We are organizing a CoPS Workshop for researchers at all career stages, from early-career to senior
+                researchers, as well as industry professionals.
+              </p>
+              <ul>
+                <li><span><strong>Young researchers:</strong> Receive constructive feedback on your work, expand your professional network, and explore opportunities for future collaborations.</span></li>
+                <li><span><strong>Senior researchers:</strong> Connect with fellow researchers and industry professionals, exchange ideas, and establish new research projects and collaborations.</span></li>
+                <li><span><strong>Industry professionals:</strong> Network with members of the local research community, gain insights into the latest research developments, and share industry challenges to explore potential solutions together.</span></li>
+              </ul>
+            </div>
+          </section>
+
           <section class="program" id="program">
             <div class="program-head">
               <h2>Program</h2>
@@ -909,7 +989,7 @@
 
             <div class="call-intro">
               <p>
-                We invite the submission of abstracts for 20-minute talks on all topics related to process science, including but not limited to:
+                We invite the submission of abstracts for about 15/20-minute talks (exact time to be decided once all submissions are in) on all topics related to process science, including but not limited to:
               </p>
               <ul class="topics">
                 <li>Recent research results</li>
@@ -917,9 +997,11 @@
                 <li>Newly funded research projects</li>
                 <li>Research proposals seeking collaborators or partners</li>
                 <li>Open problems, emerging challenges, and promising research directions</li>
+                <li>Lessons learned from process science projects in practice</li>
+                <li>Unmet needs of real-world process analysis and improvement</li>
               </ul>
               <p>
-                We particularly encourage PhD students and early-career researchers to contribute, including presentations of work in progress and recently accepted papers. The goal is to foster discussion and collaboration rather than to present only completed research, so contributions at all stages of development are welcome. Previously published works are welcome.
+                The goal is to foster discussion and collaboration rather than to present only completed research, so contributions at all stages of development are welcome, including previously published works.
               </p>
               <p>
                 Talk proposals should consist of a title and a one-paragraph abstract. No need to submit a PDF.
@@ -928,6 +1010,18 @@
 
             <div class="call-form">
               <a class="btn primary" href="https://docs.google.com/forms/d/e/1FAIpQLScVnV9nI2N9BvgN-wT77mKXkzoMmQl5RL_J4ogImElWWaQ4mQ/viewform" target="_blank" rel="noopener">Submit your proposal →</a>
+            </div>
+          </section>
+
+          <section class="organization" id="organization">
+            <h2>Organization</h2>
+            <div class="organization-body">
+              <p>
+                Participation is free, but registration is necessary. More details about the location will be announced soon.
+              </p>
+            </div>
+            <div class="call-form">
+              <a class="btn primary" href="#">Register now →</a>
             </div>
           </section>
 
@@ -953,7 +1047,7 @@
                   </tr>
                   <tr>
                     <td>Registration deadline</td>
-                    <td class="date tba">To be announced</td>
+                    <td class="date">25 January 2027</td>
                   </tr>
                   <tr class="event">
                     <td>C-PSD</td>
@@ -961,10 +1055,6 @@
                   </tr>
                 </tbody>
               </table>
-            </div>
-
-            <div class="call-form">
-              <a class="btn primary" href="#">Register now →</a>
             </div>
           </section>
         </div>
